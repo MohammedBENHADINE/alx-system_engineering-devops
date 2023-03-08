@@ -18,3 +18,4 @@
 17. file '101-clean_emacs' : Delete all files that end with the character ~.
 18. file '102-tree' : Create many directories in chain.
 19. file '103-commas' : custom listing.
+20. files 'input, school , school.mgc' : Create a new magic file to check School data files.
