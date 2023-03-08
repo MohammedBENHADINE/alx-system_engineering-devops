@@ -9,4 +9,5 @@
 8. file '7-movethatfile' : Move the file betty from /tmp/ to /tmp/my_first_directory.
 9. file '8-firstdelete' : Delete file Betty.
 10. file '9-firstdirdeletion' : Delete folder from /tmp.
+11. file '10-back' : Change the working directory to the previous one.
 
