@@ -5,3 +5,4 @@
 4. file '3-listfiles' : Display current directory contents in a long format.
 5. file '4-listmorefiles' : Display current directory contents, including hidden files.
 6. file '5-listfilesdigitonly' : Display current directory contents , including hidden files and using numeric IDs for user and group.
+7. file '6-firstdirectory' : Create a directory named my_first_directory in the /tmp/ directory.
