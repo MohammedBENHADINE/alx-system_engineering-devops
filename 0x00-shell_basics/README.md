@@ -17,3 +17,4 @@
 16. file '100-lets_move' : Move all files beginning with an uppercase letter to the directory /tmp/u.
 17. file '101-clean_emacs' : Delete all files that end with the character ~.
 18. file '102-tree' : Create many directories in chain.
+19. file '103-commas' : custom listing.
