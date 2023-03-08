@@ -11,3 +11,4 @@
 10. file '9-firstdirdeletion' : Delete folder from /tmp.
 11. file '10-back' : Change the working directory to the previous one.
 12. file '11-lists' : list all files (even ones with names beginning with a period character, which are normally hidden) in the current directory and the parent of the working directory and the /boot directory (in this order), in long format.
+13. file '2-file_type' : Print the type of the file named iamafile. The file iamafile will be in the /tmp directory when we will run your script.
