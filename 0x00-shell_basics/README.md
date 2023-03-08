@@ -14,3 +14,4 @@
 13. file '12-file_type' : Print the type of the file named iamafile. The file iamafile will be in the /tmp directory when we will run your script.
 14. file '13-symbolic_link' : Create a symbolic link to /bin/ls.
 15. file '14-copy_html' : Create a script that copies all the HTML files from the current working directory to the parent of the working directory, but only copy files that did not exist in the parent of the working directory or were newer than the versions in the parent of the working directory.
+16. file '100-lets_move' : Move all files beginning with an uppercase letter to the directory /tmp/u.
