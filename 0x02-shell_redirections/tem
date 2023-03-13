@@ -1,0 +1,93 @@
+#!/bin/bash
+echo '#!/bin/bash' > 0-hello_world
+chmod u+x 0-hello_world
+git add "0-hello_world"
+git commit -m "0-hello_world"
+echo '#!/bin/bash' > 1-confused_smiley
+chmod u+x 1-confused_smiley
+git add "1-confused_smiley"
+git commit -m "1-confused_smiley"
+echo '#!/bin/bash' > 2-hellofile
+chmod u+x 2-hellofile
+git add "2-hellofile"
+git commit -m "2-hellofile"
+echo '#!/bin/bash' > 3-twofiles
+chmod u+x 3-twofiles
+git add "3-twofiles"
+git commit -m "3-twofiles"
+echo '#!/bin/bash' > 4-lastlines
+chmod u+x 4-lastlines
+git add "4-lastlines"
+git commit -m "4-lastlines"
+echo '#!/bin/bash' > 5-firstlines
+chmod u+x 5-firstlines
+git add "5-firstlines"
+git commit -m "5-firstlines"
+echo '#!/bin/bash' > 6-third_line
+chmod u+x 6-third_line
+git add "6-third_line"
+git commit -m "6-third_line"
+echo '#!/bin/bash' > 7-file
+chmod u+x 7-file
+git add "7-file"
+git commit -m "7-file"
+echo '#!/bin/bash' > 8-cwd_state
+chmod u+x 8-cwd_state
+git add "8-cwd_state"
+git commit -m "8-cwd_state"
+echo '#!/bin/bash' > 9-duplicate_last_line
+chmod u+x 9-duplicate_last_line
+git add "9-duplicate_last_line"
+git commit -m "9-duplicate_last_line"
+echo '#!/bin/bash' > 10-no_more_js
+chmod u+x 10-no_more_js
+git add "10-no_more_js"
+git commit -m "10-no_more_js"
+echo '#!/bin/bash' > 11-directories
+chmod u+x 11-directories
+git add "11-directories"
+git commit -m "11-directories"
+echo '#!/bin/bash' > 12-newest_files
+chmod u+x 12-newest_files
+git add "12-newest_files"
+git commit -m "12-newest_files"
+echo '#!/bin/bash' > 13-unique
+chmod u+x 13-unique
+git add "13-unique"
+git commit -m "13-unique"
+echo '#!/bin/bash' > 14-findthatword
+chmod u+x 14-findthatword
+git add "14-findthatword"
+git commit -m "14-findthatword"
+echo '#!/bin/bash' > 15-countthatword
+chmod u+x 15-countthatword
+git add "15-countthatword"
+git commit -m "15-countthatword"
+echo '#!/bin/bash' > 16-whatsnext
+chmod u+x 16-whatsnext
+git add "16-whatsnext"
+git commit -m "16-whatsnext"
+echo '#!/bin/bash' > 17-hidethisword
+chmod u+x 17-hidethisword
+git add "17-hidethisword"
+git commit -m "17-hidethisword"
+echo '#!/bin/bash' > 18-letteronly
+chmod u+x 18-letteronly
+git add "18-letteronly"
+git commit -m "18-letteronly"
+echo '#!/bin/bash' > 19-AZ
+chmod u+x 19-AZ
+git add "19-AZ"
+git commit -m "19-AZ"
+echo '#!/bin/bash' > 20-hiago
+chmod u+x 20-hiago
+git add "20-hiago"
+git commit -m "20-hiago"
+echo '#!/bin/bash' > 21-reverse
+chmod u+x 21-reverse
+git add "21-reverse"
+git commit -m "21-reverse"
+echo '#!/bin/bash' > 22-users_and_homes
+chmod u+x 22-users_and_homes
+git add "22-users_and_homes"
+git commit -m "22-users_and_homes"
