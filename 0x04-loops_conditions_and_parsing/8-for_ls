@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #ls time
-list="$(find . -maxdepth 1 ! -name . -printf "%P\n" | sed 's/^[0-9]*-//')"
+list="$(find . -printf "%P\n" | sed 's/^[0-9]*-//')"
 for i in $list
 do
 	echo "$i"
