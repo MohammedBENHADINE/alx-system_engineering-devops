@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#check apache server logs
+IFS=
+while read -r line; do
+	awk '{print $1, $10}' <<< "$line"
+done < apache-access.log
