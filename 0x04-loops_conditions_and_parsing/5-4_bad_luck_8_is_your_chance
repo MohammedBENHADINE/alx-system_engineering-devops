@@ -12,5 +12,5 @@ do
 	else
 		echo "Best School"
 	fi
-	let i++
+	((i++))
 done
