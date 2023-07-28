@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#send SIGTERM to process by name
+pid=$(pgrep -f "7-highlander")
+flag=$?
+if [ $flag -eq 0 ]; then
+	kill -9 "$pid"
+fi
