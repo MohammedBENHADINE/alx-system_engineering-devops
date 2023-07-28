@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#listen on SIGINT
+leave()
+{
+	echo "I am invincible!!!"
+}
+trap leave SIGTERM
+while true; do
+	echo "To infinity and beyond"
+	sleep 2
+done

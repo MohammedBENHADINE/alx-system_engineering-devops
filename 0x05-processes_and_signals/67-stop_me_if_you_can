@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#send SIGTERM to process by name
+pkill -f 7-highlander
