@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#process and pid file
+pid=$$
+echo "$pid" > /var/run/myscript.pid
+grace()
+{
+	echo "I hate the kill command"
+	rm -rf /var/run/myscript.pid
+	exit
+}
+leave()
+{
+	echo "Y U no love me?!"
+}
+trap leave SIGINT
+trap grace SIGTERM
+trap 'rm -rf /var/run/myscript.pid && exit' SIGQUIT
+while true; do
+	echo "To infinity and beyond"
+	sleep 2
+done
