@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+#init script for manage_my_process
+### BEGIN INIT INFO
+# Provides:          manage_my_process
+# Description:       Controls the manage_my_process process
+### END INIT INFO
+
+#
+# main()
+#
+
+case "$1" in
+	'start')
+		./manage_my_process &
+		touch /var/run/my_process.pid
+		echo "$!" > /var/run/my_process.pid
+		echo "manage_my_process started"
+		;;
+	'stop')
+		kill  "$(cat /var/run/my_process.pid)" && rm -f /var/run/my_process.pid
+		echo "manage_my_process stopped"	
+		;;
+	'restart')
+		kill "$(cat /var/run/my_process.pid)"
+		rm -f /var/run/my_process.pid
+		./manage_my_process &
+		touch /var/run/my_process.pid
+		echo "$!" > /var/run/my_process.pid
+		echo "manage_my_process restarted"
+		;;
+	*)
+		echo "Usage: manage_my_process start|stop|restart"
+		exit 1
+		;;
+esac
+exit 0
