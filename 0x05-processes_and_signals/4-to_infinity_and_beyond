@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#listen on SIGINT
+leave()
+{
+	echo ""
+	exit 1
+}
+trap leave SIGINT
+while true; do
+	echo "To infinity and beyond"
+	sleep 2
+done
