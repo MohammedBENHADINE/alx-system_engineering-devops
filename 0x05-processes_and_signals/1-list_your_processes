@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#get list of process
+ps auxH
