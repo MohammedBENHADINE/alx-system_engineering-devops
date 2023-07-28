@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#get PID of bash
+ps -C bash | awk 'NR == 2 { print $1; exit }'
