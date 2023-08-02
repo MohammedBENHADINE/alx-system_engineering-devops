@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Change IPs in hosts file and add workaround of Docker
+cp /etc/hosts ~/hosts.new
+sed -i s/^127.*$// ~/hosts.new
+echo -e "8.8.8.8\tfacebook.com\n127.0.0.2\tlocalhost" >> ~/hosts.new
+cp -f ~/hosts.new /etc/hosts
+rm ~/hosts.new
