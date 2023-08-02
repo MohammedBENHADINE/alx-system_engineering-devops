@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Open a listener AKA socket server on port 98
+nc -l -p 98
