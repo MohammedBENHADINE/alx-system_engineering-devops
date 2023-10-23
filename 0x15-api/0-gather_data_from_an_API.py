@@ -5,6 +5,8 @@ import sys
 import urllib.request as fetcher
 
 if __name__ == "__main__":
+    if len(sys.argv) == 1:
+        sys.exit()
     endpoint = 'https://jsonplaceholder.typicode.com'
     name_url = '/users/' + str(sys.argv[1])
     todos_url = name_url + '/todos'
