@@ -22,5 +22,5 @@ if __name__ == "__main__":
         if (el.get("completed") is True):
             todoDone.append("\t " + el.get("title"))
             done += 1
-    print('Employee {} is done with tasks({}/{})\n{}'.format(
+    print('Employee {} is done with tasks({}/{}):\n{}'.format(
         userF["name"], done, len(todosF),  "\n".join(todoDone)))
