@@ -22,7 +22,7 @@ if __name__ == "__main__":
         writer = csv.writer(file, quotechar='"', quoting=csv.QUOTE_NONNUMERIC)
         for el in todosF:
             writer.writerow([
-                userid, username,
+                userid, userF.get("username"),
                 str(el.get("completed")),
                 el.get("title")
                 ])
