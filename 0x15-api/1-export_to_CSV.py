@@ -18,12 +18,12 @@ if __name__ == "__main__":
     res = fetcher.urlopen(endpoint + todos_url)
     todos = res.read()
     todosF = json.loads(todos)
-    with open(userid + ".csv", 'x') as file:
-        writer = csv.writer(file)
+    with open(userid + ".csv", 'x', newline='') as file:
+        writer = csv.writer(file, quotechar='"', quoting=csv.QUOTE_NONNUMERIC)
         for el in todosF:
             writer.writerow([
                 userid, username,
-                el.get("completed"),
+                str(el.get("completed")),
                 el.get("title")
                 ])
         file.close()
