@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+# Display subdomain records on DNS server
+
+get_record() {
+    local subdomain="$1"
+    local domain="$2"
+    local record=$(dig A "$subdomain.$domain" | awk '/;; ANSWER SECTION:/{flag=1; next} flag{split($0, fields); print fields[4]; flag=0}')
+    echo "$record"
+}
+
+get_ip() {
+    local subdomain="$1"
+    local domain="$2"
+    local ip=$(dig A "$subdomain.$domain" | awk '/;; ANSWER SECTION:/{flag=1; next} flag{split($0, fields); print fields[5]; flag=0}')
+    echo "$ip"
+}
+
+if [ "$#" -eq 0 ]; then
+    echo "Domain is mandatory"
+    exit 1
+elif [ "$#" -eq 1 ]; then
+    domain="$1"
+    subdomains=("www" "lb-01" "web-01" "web-02")
+    for sub in "${subdomains[@]}"; do
+        myip=$(get_ip "$sub" "$domain")
+        myrecord=$(get_record "$sub" "$domain")
+        echo "The subdomain $sub is a $myrecord record and points to $myip"
+    done
+elif [ "$#" -eq 2 ]; then
+    domain="$1"
+    sub="$2"
+    myip=$(get_ip "$sub" "$domain")
+    myrecord=$(get_record "$sub" "$domain")
+    echo "The subdomain $sub is a $myrecord record and points to $myip"
+else
+    echo "Invalid number of arguments"
+    exit 1
+fi
