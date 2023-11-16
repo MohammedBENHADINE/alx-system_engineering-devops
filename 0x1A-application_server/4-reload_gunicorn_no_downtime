@@ -1,9 +1,4 @@
-#!/bin/bash
-
-GUNICORN_PID=$(ps aux | grep '[g]unicorn' | awk '{print $2}' | head -n 1)
-
-# Send the HUP signal to the Gunicorn master process
-echo "Reloading Gunicorn gracefully..."
-kill -HUP $GUNICORN_PID
-
-echo "Reload complete."
+#!/usr/bin/env bash
+# script to send hang up signal to gunicorn
+GUNICORN_PID=$(pgrep gunicorn | head -n 1)
+kill -HUP "$GUNICORN_PID"
