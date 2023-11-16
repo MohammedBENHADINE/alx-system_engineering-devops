@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# script to send hang up signal to gunicorn
-GUNICORN_PID=$(pgrep gunicorn | head -n 1)
-kill -HUP "$GUNICORN_PID"
+#Bash script to reload Gunicorn in a graceful way.
+
+systemctl status gunicorn | grep -oE 'Main PID: [0-9]+' | cut -d ' ' -f3 | xargs kill -HUP
